@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-teal-700: #009ba7;
-  --color-teal-500: #5ce0eb;
-  --color-teal-100: #ebfbfb;
-
-  --color-grey-900: #1d1d1d;
-  --color-grey-700: #5f5f5f;
-  --color-grey-500: #afafaf;
-  --color-grey-400: #a6a6a6;
-
-  --color-white-700: #f8f5f5;
-}
-
 /* scrollbar width 0 */
 .scrollbar-0::-webkit-scrollbar {
   width: 0;
