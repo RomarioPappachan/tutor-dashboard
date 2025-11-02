@@ -32,7 +32,7 @@ function DashboardLayout() {
 
   return (
     <>
-      <div className="relative rounded-md">
+      <div className="relative scale-105 rounded-md sm:scale-100">
         {showRequest && (
           <TutorRequest show={requestOpen} onRequestOpen={handleClose} />
         )}
