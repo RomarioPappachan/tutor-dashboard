@@ -37,18 +37,18 @@ function DashboardLayout() {
           <TutorRequest show={requestOpen} onRequestOpen={handleClose} />
         )}
       </div>
-      <div className="flex flex-col lg:flex-row justify-start items-start gap-6">
-        <div className="w-full lg:w-3/4 space-y-4 lg:space-y-6 xl:space-y-8">
+      <div className="flex flex-col items-start justify-start gap-6 lg:flex-row">
+        <div className="w-full space-y-4 lg:w-3/4 lg:space-y-6 xl:space-y-8">
           <Stats />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-3 xl:gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-3 xl:gap-4">
             <Box>
-              <h3 className="text-teal-dark font-bold text-sm lg:text-base xl:text-lg">
+              <h3 className="text-sm font-bold text-teal-dark lg:text-base xl:text-lg">
                 Upcoming sessions this week
               </h3>
               <SessionList sessionData={upcomingSessions} />
             </Box>
             <Box>
-              <h3 className="text-teal-dark font-bold text-sm lg:text-base xl:text-lg">
+              <h3 className="text-sm font-bold text-teal-dark lg:text-base xl:text-lg">
                 Completed
               </h3>
               <SessionList sessionData={completedSessions} />
@@ -58,7 +58,7 @@ function DashboardLayout() {
 
         {!showCalender && (
           <button
-            className="sm:hidden w-full h-10 text-sm font-bold bg-teal-medium text-white hover:bg-teal-medium/90 flex justify-center items-center rounded-lg"
+            className="flex h-10 w-full items-center justify-center rounded-lg bg-teal-medium text-sm font-bold text-white hover:bg-teal-medium/90 md:hidden"
             onClick={() => setShowCalender(true)}
           >
             See Calender
@@ -67,14 +67,14 @@ function DashboardLayout() {
 
         {/* Calender and Notices  */}
         <div
-          className={`w-full lg:w-1/4 sm:flex flex-col space-y-4 lg:space-y-6 xl:space-y-8  ${
+          className={`w-full flex-col space-y-4 md:flex lg:w-1/4 lg:space-y-6 xl:space-y-8 ${
             showCalender ? "" : "hidden"
           }`}
         >
-          <div className="min-h-72 xl:min-h-[350px] pt-2 xl:pt-4 bg-white">
+          <div className="min-h-72 bg-white pt-2 xl:min-h-[350px] xl:pt-4">
             <CalendarWidget />
           </div>
-          <div className="bg-white xl:p-2 grow">
+          <div className="grow bg-white xl:p-2">
             <NoticeBoard />
           </div>
         </div>

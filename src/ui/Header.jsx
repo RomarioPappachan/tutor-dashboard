@@ -15,9 +15,9 @@ function Header() {
 
   return (
     <div className="w-full">
-      <header className="px-6 lg:px-8 xl:px-12 py-2 flex items-center justify-between lg:justify-normal border-b border-gray-200">
+      <header className="flex items-center justify-between border-b border-gray-200 px-6 py-2 lg:justify-normal lg:px-8 xl:px-12">
         <Logo />
-        <div className="hidden lg:flex items-center justify-between grow">
+        <div className="hidden grow items-center justify-between lg:flex">
           <HeaderNav />
           <HeaderMenu />
         </div>
@@ -39,7 +39,7 @@ function Header() {
 
       {/* Overlay */}
       {isOpen && (
-        <div onClick={closeSidebar} className="fixed inset-0 lg:hidden z-40" />
+        <div onClick={closeSidebar} className="fixed inset-0 z-40 lg:hidden" />
       )}
     </div>
   );

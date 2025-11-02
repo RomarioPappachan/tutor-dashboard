@@ -34,7 +34,7 @@ const notices = [
 export default function NoticeBoard() {
   return (
     <div className="w-full bg-white p-4">
-      <h3 className="text-teal-dark font-bold text-sm lg:text-base xl:text-lg mb-8  ">
+      <h3 className="mb-8 text-sm font-bold text-teal-dark lg:text-base xl:text-lg">
         Notice Board
       </h3>
 
@@ -44,29 +44,29 @@ export default function NoticeBoard() {
         {notices.map((notice, i) => (
           <div
             key={i}
-            className="relative ps-1 pb-6 space-x-2 border-l xl:border-l-2 border-teal-dark/40 last:border-transparent"
+            className="relative space-x-2 border-l border-teal-dark/40 pb-6 ps-1 last:border-transparent xl:border-l-2"
           >
             <div
-              className={`w-2 xl:w-3 h-2 xl:h-3 rounded-full border-2 absolute -left-1 top-0.5 xl:-left-[7px] xl:top-1  ${
+              className={`absolute -left-1 top-0.5 h-2 w-2 rounded-full border-2 xl:-left-[7px] xl:top-1 xl:h-3 xl:w-3 ${
                 notice.active
-                  ? "bg-teal-dark border-teal-dark"
-                  : "bg-white border-teal-dark"
+                  ? "border-teal-dark bg-teal-dark"
+                  : "border-teal-dark bg-white"
               }`}
             ></div>
 
-            <div className="flex justify-between items-center mb-1">
-              <p className="text-gray-dark font-bold text-xs xl:text-base">
+            <div className="mb-1 flex items-center justify-between">
+              <p className="text-xs font-bold text-gray-dark xl:text-base">
                 {notice.title}
               </p>
-              <span className="text-gray-medium font-semibold text-[8px] lg:text-[10px] xl:text-xs whitespace-nowrap">
+              <span className="whitespace-nowrap text-[8px] font-semibold text-gray-medium lg:text-[10px] xl:text-xs">
                 {notice.time}
               </span>
             </div>
 
-            <p className="text-gray-medium font-semibold text-[10px] lg:text-[11px] xl:text-xs">
+            <p className="text-[10px] font-semibold text-gray-medium lg:text-[11px] xl:text-xs">
               {notice.description}
               {notice.action && (
-                <span className="cursor-pointer underline ml-1 font-medium">
+                <span className="ml-1 cursor-pointer font-medium underline hover:text-teal-dark">
                   {notice.action}
                 </span>
               )}
@@ -75,7 +75,7 @@ export default function NoticeBoard() {
         ))}
       </div>
 
-      <button className="text-teal-dark text-xs xl:text-base mt-8 p-1 flex items-center gap-1 rounded-md hover:bg-teal-light active:scale-90 active:bg-teal-100 focus:bg-teal-100 transition-all duration-150">
+      <button className="mt-8 flex items-center gap-1 rounded-md p-1 text-xs text-teal-dark transition-all duration-150 hover:bg-teal-light focus:bg-teal-100 active:scale-90 active:bg-teal-100 xl:text-base">
         Go to notifications
         <LuChevronDown />
       </button>

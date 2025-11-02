@@ -4,7 +4,7 @@ function Logo() {
       <img
         src="/loremlogo.png"
         alt="Logo"
-        className="h-7 sm:h-8 lg:h-10 xl:h-12 w-auto"
+        className="h-7 w-auto sm:h-8 lg:h-10 xl:h-12"
       />
     </div>
   );

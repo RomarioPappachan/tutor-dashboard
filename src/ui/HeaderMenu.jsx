@@ -8,7 +8,7 @@ function HeaderMenu() {
       <UserAvatar />
 
       <div className="relative">
-        <span className="absolute top-0.5 xl:top-1 right-0 size-4 p-1 rounded-full  border-[0.5px] border-white text-[8px] bg-red-500 text-white flex justify-center items-center">
+        <span className="absolute right-0 top-0.5 flex size-4 items-center justify-center rounded-full border-[0.5px] border-white bg-red-500 p-1 text-[8px] text-white xl:top-1">
           4
         </span>
         <ButtonIcon>

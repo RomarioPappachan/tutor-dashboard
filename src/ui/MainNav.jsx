@@ -42,7 +42,7 @@ const navItems = [
 
 function MainNav() {
   return (
-    <ul className="flex flex-col items-start lg:flex-row lg:items-center gap-x-6 xl:gap-x-12">
+    <ul className="flex flex-col items-start gap-x-6 lg:flex-row lg:items-center xl:gap-x-12">
       {navItems.map((item) => (
         <li key={item.label}>
           <StyledNavLink to={item.to}>
